@@ -21,20 +21,20 @@ const Hero = () => {
     <div>
       <div>
         {/* INTRODUCTION */}
-        <div className="bg-black h-[80vh] flex gap-4 flex-col justify-center">
+        <div className="text-xs md:text-xl bg-black h-[80vh] flex gap-4 flex-col justify-center p-10">
           {/* <h1 className="text-4xl text-center text-[rgb(45,212,191)]">
             {`<Hello/>`} 👋 {"<Hello/>"}
           </h1> */}
-          <p className="text-4xl text-center text-[rgb(45,212,191)]">
+          <p className="text-2xl md:text-4xl text-center text-[rgb(45,212,191)]">
             &lt;Hello /&gt; 👋
           </p>
 
-          <h1 className="text-white text-center text-3xl">
+          <p className="text-white text-center text-2xl md:text-4xl">
             I am{" "}
             <span className="text-[rgb(45,212,191)]">
               Peter Boluwatife Akintola
             </span>
-          </h1>
+          </p>
           <p className="text-white text-center">
             A seasoned{" "}
             <span className="text-[rgb(45,212,191)]">{`{Frontend Developer}`}</span>{" "}
