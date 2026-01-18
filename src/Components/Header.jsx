@@ -49,7 +49,7 @@ const Header = () => {
         <div className="text-xl md:text-3xl font-extrabold">SB-techlyCoded</div>
 
         {/* Hamburger (always extreme right on mobile) */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-xl">
           <FontAwesomeIcon icon={open ? faXmark : faBars} />
         </button>
 
@@ -67,7 +67,7 @@ const Header = () => {
 
       {/* Mobile dropdown menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
+        className={`md:hidden overflow-hidden transition-all duration-500 ${
           open ? "max-h-screen" : "max-h-0"
         }`}
       >
