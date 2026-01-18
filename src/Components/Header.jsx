@@ -46,7 +46,7 @@ const Header = () => {
       {/* Top bar */}
       <div className="flex items-center justify-between px-10 py-4">
         {/* Logo */}
-        <div className="text-3xl font-extrabold">SB-techlyCoded</div>
+        <div className="text-xl md:text-3xl font-extrabold">SB-techlyCoded</div>
 
         {/* Hamburger (always extreme right on mobile) */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
