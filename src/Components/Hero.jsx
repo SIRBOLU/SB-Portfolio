@@ -209,7 +209,7 @@ const Hero = () => {
                 <input
                   type="text"
                   placeholder="Enter name"
-                  className="w-[300px] rounded-md p-2 bg-[#27272a] border-2 border-white"
+                  className="max-w-full rounded-md p-2 bg-[#27272a] border-2 border-white"
                 />
               </div>
               <div className="flex flex-col">
@@ -219,7 +219,7 @@ const Hero = () => {
                 <input
                   type="emaii"
                   placeholder="Enter email"
-                  className="w-[300px] rounded-md p-2 bg-[#27272a] border-2 border-white"
+                  className="max-w-full rounded-md p-2 bg-[#27272a] border-2 border-white"
                 />
               </div>
               <div className="flex flex-col">
@@ -230,7 +230,7 @@ const Hero = () => {
                   name=""
                   id=""
                   placeholder="Enter message"
-                  className=" w-[300px] rounded-md p-2 bg-[#27272a] border-2 border-white h-28"
+                  className=" max-w-screen-sm rounded-md p-2 bg-[#27272a] border-2 border-white h-28"
                 ></textarea>
               </div>
 
