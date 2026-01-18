@@ -15,6 +15,7 @@ import {
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import sbpic from "../assets/profile-pic.png";
 
 const Hero = () => {
   return (
@@ -111,11 +112,7 @@ const Hero = () => {
           About <span className="text-[rgb(45,212,191)]">me</span>.
         </p>
         <div className="max-w-full flex flex-col items-center text-center md:text-left md:flex-row p-8 md:p-0 gap-[3rem]">
-          <img
-            src="./src/assets\profile-pic.png"
-            alt="my-pic"
-            className="w-[200px] h-[200px]"
-          />
+          <img src={sbpic} alt="my-pic" className="w-[200px] h-[200px]" />
           <p className="text-white text-sm leading-7">
             I am a motivated and results-driven web developer, with a good
             knowledge of HTML, CSS, Tailwind CSS, JavaScript, and ReactJS,
