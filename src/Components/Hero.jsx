@@ -57,13 +57,12 @@ const Hero = () => {
               What <span className="text-[rgb(45,212,191)]">I do.</span>
             </p>
           </div>
-          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:w-[1000px] [&>*]:rounded-md [&>*]:h-[250px] flex justify-center gap-6 items-center text-center max-w-[800px] m-auto">
+          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:w-[1000px] [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] m-auto">
             <div className="flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
               <div>
                 <FontAwesomeIcon icon={faGlobe} className="p-4" />
               </div>
               <p>Web Development</p>
-              <div></div>
               <p className="p-6">
                 I use my programming knowledge and skills such as HTML5, CSS3,
                 JAVASCRIPT and TAILWIND to build user-friendly websites
