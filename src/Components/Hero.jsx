@@ -42,10 +42,22 @@ const Hero = () => {
             something amazing.
           </p>
           <div className=" text-center flex justify-center gap-4 mt-8 [&>*]:bg-gray-200 [&>*]:rounded-full [&>*]:p-2">
-            <FontAwesomeIcon icon={faGithub} />
-            <FontAwesomeIcon icon={faEnvelope} />
-            <FontAwesomeIcon icon={faLinkedinIn} />
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="hover:bg-[rgb(45,212,191)]"
+            />
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="hover:bg-[rgb(45,212,191)]"
+            />
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className="hover:bg-[rgb(45,212,191)]"
+            />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              className="hover:bg-[rgb(45,212,191)]"
+            />
           </div>
         </div>
 
