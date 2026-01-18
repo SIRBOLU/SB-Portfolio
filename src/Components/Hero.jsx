@@ -69,7 +69,7 @@ const Hero = () => {
               What <span className="text-[rgb(45,212,191)]">I do.</span>
             </p>
           </div>
-          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:w-[1000px] [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] m-auto">
+          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:w-[1000px] [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] m-auto text-sm md:text-md">
             <div className="max-w-full flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
               <div>
                 <FontAwesomeIcon icon={faGlobe} className="p-4" />
