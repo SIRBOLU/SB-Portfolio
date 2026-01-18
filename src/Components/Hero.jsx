@@ -58,7 +58,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:w-[1000px] [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] m-auto">
-            <div className="flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
+            <div className="max-w-full flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
               <div>
                 <FontAwesomeIcon icon={faGlobe} className="p-4" />
               </div>
@@ -68,7 +68,7 @@ const Hero = () => {
                 JAVASCRIPT and TAILWIND to build user-friendly websites
               </p>
             </div>
-            <div className="flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
+            <div className="max-w-full flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
               <div>
                 <FontAwesomeIcon icon={faDisplay} className="p-4" />
               </div>
@@ -98,7 +98,7 @@ const Hero = () => {
         <p className="text-center text-white text-3xl pb-6">
           About <span className="text-[rgb(45,212,191)]">me</span>.
         </p>
-        <div className="flex gap-[3rem]">
+        <div className="max-w-full flex flex-col items-center text-center md:text-left md:flex-row p-8 md:p-0 gap-[3rem]">
           <img
             src="./src/assets\profile-pic.png"
             alt="my-pic"
@@ -120,7 +120,9 @@ const Hero = () => {
             </div>
           </p>
         </div>
-        <div className="text-white flex justify-between gap-12 mt-14 mb-14 max-w-[800px] ">
+
+        {/* SKILLS */}
+        <div className="max-w=full text-white flex flex-col items-center text-center md:text-left md:flex-row justify-between gap-12 mt-14 mb-14 max-w-[800px] ">
           <div className="w-[350px]">
             <p>SKILLS</p>
             <p className="pb-4 pt-2 text-3xl">
@@ -175,7 +177,7 @@ const Hero = () => {
           </div>
 
           {/* CONTACT ME DETAILS */}
-          <div className="flex justify-between bg-black p-10 mt-6 mb-6 text-sm rounded-lg">
+          <div className="max-w-full flex flex-col md:flex-row justify-between bg-black p-10 mt-6 mb-6 text-sm rounded-lg gap-8">
             <div>
               <p>Have an awesome project idea?</p>
               <p className="text-[rgb(45,212,191)] pb-6">Let's Discuss</p>
@@ -217,7 +219,7 @@ const Hero = () => {
                 <input
                   type="emaii"
                   placeholder="Enter email"
-                  className="rounded-md p-2 bg-[#27272a] border-2 border-white"
+                  className="w-[300px] rounded-md p-2 bg-[#27272a] border-2 border-white"
                 />
               </div>
               <div className="flex flex-col">
@@ -228,34 +230,44 @@ const Hero = () => {
                   name=""
                   id=""
                   placeholder="Enter message"
-                  className="rounded-md p-2 bg-[#27272a] border-2 border-white h-28"
+                  className=" w-[300px] rounded-md p-2 bg-[#27272a] border-2 border-white h-28"
                 ></textarea>
               </div>
 
-              <button className="mt-6 bg-[rgb(45,212,191)] px-3 py-2 rounded-lg text-black">
-                Send Message <FontAwesomeIcon icon={faInbox} />
-              </button>
+              <div className="flex justify-center md:justify-start">
+                <button className="mt-6 bg-[rgb(45,212,191)] px-3 py-2 rounded-lg text-black">
+                  Send Message <FontAwesomeIcon icon={faInbox} />
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
 
-      <div className="text-white text-xs flex justify-around my-8">
+      <div className="max-w-full text-white text-xs flex flex-col md:flex-row gap-8 md:gap-0 items-center justify-around my-8">
         <div className="text-3xl font-extrabold text-white">SB-techlyCoded</div>
-        <div className="flex flex-col gap-3">
-          <p>Web Developer</p>
-          <p>Frontend Developer</p>
+        <div className="flex flex-col  gap-3">
+          <p className="text-center md:text-left">Web Developer</p>
+          <p className="text-center md:text-left">Frontend Developer</p>
         </div>
         <div>
           <ul className="flex flex-col gap-3">
-            <li className="hover:text-[rgb(45,212,191)]">Home</li>
-            <li className="hover:text-[rgb(45,212,191)]">My projects</li>
-            <li className="hover:text-[rgb(45,212,191)]">About me</li>
-            <li className="hover:text-[rgb(45,212,191)]">Contact me</li>
+            <li className="hover:text-[rgb(45,212,191)] text-center md:text-left">
+              Home
+            </li>
+            <li className="hover:text-[rgb(45,212,191)] text-center md:text-left">
+              My projects
+            </li>
+            <li className="hover:text-[rgb(45,212,191)] text-center md:text-left">
+              About me
+            </li>
+            <li className="hover:text-[rgb(45,212,191)] text-center md:text-left">
+              Contact me
+            </li>
           </ul>
         </div>
         <div>
-          <p>Social Media Handles</p>
+          <p className="text-center md:text-left">Social Media Handles</p>
           <div className=" text-center flex justify-center gap-4 mt-4 [&>*]:bg-gray-200 [&>*]:rounded-full [&>*]:p-2 text-black">
             <FontAwesomeIcon
               icon={faGithub}
