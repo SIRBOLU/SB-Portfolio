@@ -21,6 +21,11 @@ const projects = [
     link: "https://elemu.com",
     title: "I dey sell emu",
   },
+  {
+    image: quizpic,
+    link: "https://elemu.com",
+    title: "I dey sell emu",
+  },
 ];
 
 export default projects;

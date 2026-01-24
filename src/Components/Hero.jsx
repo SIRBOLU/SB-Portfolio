@@ -90,7 +90,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:w-[1000px] [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] m-auto text-sm md:text-md">
+          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] mx-auto text-sm md:text-md">
             {/* 1st column */}
             <Card
               icon={<FontAwesomeIcon icon={faGlobe} className="p-4" />}
