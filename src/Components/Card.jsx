@@ -12,9 +12,23 @@
 
 // export default Card;
 
-const Card = ({ icon, img, title, description, link }) => {
+const Card = ({ icon, img, title, description, link, hoverable = false }) => {
   return (
-    <div className="bg-[#030712] text-white p-4 rounded-md h-[250px] flex flex-col items-center justify-center text-center">
+    <div
+      className={`
+        bg-[#030712]
+        text-white
+        p-4
+        rounded-md
+        h-[250px]
+        flex
+        flex-col
+        items-center
+        justify-center
+        text-center
+        ${hoverable ? "hover:bg-[rgb(45,212,191)] hover:text-black transition" : ""}
+      `}
+    >
       {/* Icon (Services section) */}
       {icon && <div className="text-3xl">{icon}</div>}
 

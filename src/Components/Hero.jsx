@@ -93,12 +93,14 @@ const Hero = () => {
           <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] mx-auto text-sm md:text-md">
             {/* 1st column */}
             <Card
+              hoverable
               icon={<FontAwesomeIcon icon={faGlobe} className="p-4" />}
               title="Web Development"
               description="I use my programming knowledge and skills such as HTML5, CSS3,
                 JAVASCRIPT and TAILWIND to build user-friendly websites"
             />
             <Card
+              hoverable
               icon={<FontAwesomeIcon icon={faDisplay} className="p-4" />}
               title="UI Design"
               description="Designing intuitive digital experiences that harmonize visual
