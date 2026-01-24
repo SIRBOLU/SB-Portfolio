@@ -16,7 +16,26 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import sbpic from "../assets/profile-pic.png";
+import Card from "./Card";
+import projects from "./Cardproject";
 
+// const projects = [
+//   {
+//     icon: "Elemu",
+//     title: "https://elemu.com",
+//     description: "I dey sell emu",
+//   },
+//   {
+//     icon: "Elemu",
+//     title: "https://elemu.com",
+//     description: "I dey sell emu",
+//   },
+//   {
+//     icon: "Elemu",
+//     title: "https://elemu.com",
+//     description: "I dey sell emu",
+//   },
+// ];
 const Hero = () => {
   return (
     <div>
@@ -70,37 +89,42 @@ const Hero = () => {
               What <span className="text-[rgb(45,212,191)]">I do.</span>
             </p>
           </div>
+
           <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:w-[1000px] [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] m-auto text-sm md:text-md">
-            <div className="max-w-full flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
-              <div>
-                <FontAwesomeIcon icon={faGlobe} className="p-4" />
-              </div>
-              <p>Web Development</p>
-              <p className="p-6">
-                I use my programming knowledge and skills such as HTML5, CSS3,
-                JAVASCRIPT and TAILWIND to build user-friendly websites
-              </p>
-            </div>
-            <div className="max-w-full flex flex-col justify-center border border-[rgb(45,212,191)] hover:bg-[rgb(45,212,191)] hover:text-black">
-              <div>
-                <FontAwesomeIcon icon={faDisplay} className="p-4" />
-              </div>
-              <p>UI Design</p>
-              <div></div>
-              <p className="p-6">
-                Designing intuitive digital experiences that harmonize visual
+            {/* 1st column */}
+            <Card
+              icon={<FontAwesomeIcon icon={faGlobe} className="p-4" />}
+              title="Web Development"
+              description="I use my programming knowledge and skills such as HTML5, CSS3,
+                JAVASCRIPT and TAILWIND to build user-friendly websites"
+            />
+            <Card
+              icon={<FontAwesomeIcon icon={faDisplay} className="p-4" />}
+              title="UI Design"
+              description="Designing intuitive digital experiences that harmonize visual
                 appeal with seamless functionality, grounded in user-centered
-                and responsive design principles.
-              </p>
-            </div>
+                and responsive design principles."
+            />
           </div>
 
           {/* PORTFOLIO */}
           <div className="text-white text-center my-12">
             <p>PORTFOLIO</p>
-            <p>
-              Featured <span className="text-[rgb(45,212,191)]">Projects</span>
+            <p className="text-white pt-2 pb-8 text-3xl">
+              Featured <span className="text-[rgb(45,212,191)] ">Projects</span>
             </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto text-center text-sm md:text-md [&>*]:bg-[#030712] [&>*]text-white [&>*]:p-4 [&>*]:rounded-md [&>*]:h-[250px]">
+              {projects.map((item, index) => {
+                return (
+                  <Card
+                    key={index}
+                    img={item.image}
+                    title={item.title}
+                    link={item.link}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
