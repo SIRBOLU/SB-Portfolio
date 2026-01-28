@@ -42,7 +42,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white fixed top-0 left-0 right-0 z-50">
+    <header className="bg-gradient-to-br from-[#0F0F0F] via-[#1A1A1A] to-[#2A2A2A] text-white fixed top-0 left-0 right-0 z-50">
       {/* Top bar */}
       <div className="flex items-center justify-between px-10 py-4">
         {/* Logo */}

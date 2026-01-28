@@ -229,7 +229,7 @@ const Hero = () => {
 
           {/* CONTACT ME DETAILS */}
           <div className="max-w-full flex flex-col md:flex-row justify-between bg-black p-10 mt-6 mb-6 text-sm rounded-lg gap-8">
-            <div>
+            <div className="flex-1">
               <p>Have an awesome project idea?</p>
               <p className="text-[rgb(45,212,191)] pb-6">Let's Discuss</p>
               <div className="flex gap-2 items-center pb-6 ">
@@ -252,7 +252,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <form action="" className="text-left">
+            <form action="" className="text-left flex-1">
               <div className="flex flex-col">
                 <label htmlFor="" className="pb-2">
                   Full Name
