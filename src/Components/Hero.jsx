@@ -1,4 +1,8 @@
 import React from "react";
+import quizpic from "../assets/Quiz.png";
+import todo from "../assets/todo.png";
+import soccer from "../assets/soccer.png";
+import advice from "../assets/advice.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDisplay,
@@ -17,25 +21,36 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import sbpic from "../assets/profile-pic.png";
 import Card from "./Card";
-import projects from "./Cardproject";
+import ProjectCard from "./ProjectCard";
 
-// const projects = [
-//   {
-//     icon: "Elemu",
-//     title: "https://elemu.com",
-//     description: "I dey sell emu",
-//   },
-//   {
-//     icon: "Elemu",
-//     title: "https://elemu.com",
-//     description: "I dey sell emu",
-//   },
-//   {
-//     icon: "Elemu",
-//     title: "https://elemu.com",
-//     description: "I dey sell emu",
-//   },
-// ];
+const projectsData = [
+  {
+    image: soccer,
+    link: "https://soccer-quiz-app.vercel.app/",
+    title: "Soccer Quiz app",
+    naration: "This is to test your football knowledge",
+  },
+  {
+    image: todo,
+    link: "https://todo-app-puce-delta.vercel.app/",
+    title: "A todo-list app",
+  },
+  {
+    image: advice,
+    link: "https://advice-generator-eight-kappa.vercel.app/",
+    title: "An automated advice app",
+  },
+  {
+    image: quizpic,
+    link: "https://appppp.com",
+    title: "Apppppppppp",
+  },
+  {
+    image: quizpic,
+    link: "https://loliii.com",
+    title: "apppppppp",
+  },
+];
 const Hero = () => {
   return (
     <div>
@@ -115,14 +130,15 @@ const Hero = () => {
             <p className="text-white pt-2 pb-8 text-3xl">
               Featured <span className="text-[rgb(45,212,191)] ">Projects</span>
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto text-center text-sm md:text-md [&>*]:bg-[#030712] [&>*]text-white [&>*]:p-4 [&>*]:rounded-md [&>*]:h-[250px]">
-              {projects.map((item, index) => {
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto text-center text-sm md:text-md [&>*]:bg-[#030712] [&>*]text-white [&>*]:rounded-md [&>*]:h-[250px]">
+              {projectsData.map((item, index) => {
                 return (
-                  <Card
+                  <ProjectCard
                     key={index}
-                    img={item.image}
+                    image={item.image}
                     title={item.title}
                     link={item.link}
+                    // naration={item.naration}
                   />
                 );
               })}
