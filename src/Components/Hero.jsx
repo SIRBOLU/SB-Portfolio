@@ -1,5 +1,4 @@
 import React from "react";
-import quizpic from "../assets/Quiz.png";
 import todo from "../assets/todo.png";
 import soccer from "../assets/soccer.png";
 import advice from "../assets/advice.png";
@@ -39,16 +38,6 @@ const projectsData = [
     image: advice,
     link: "https://advice-generator-eight-kappa.vercel.app/",
     title: "An automated advice app",
-  },
-  {
-    image: quizpic,
-    link: "https://appppp.com",
-    title: "Apppppppppp",
-  },
-  {
-    image: quizpic,
-    link: "https://loliii.com",
-    title: "apppppppp",
   },
 ];
 const Hero = () => {
