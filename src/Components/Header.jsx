@@ -159,7 +159,7 @@ const Header = () => {
         </div> */}
         <div
           onClick={() => scrollToSection("home")}
-          className="text-xl md:text-3xl font-extrabold cursor-pointer hover:text-[#2dd4bf] transition-colors duration-300"
+          className="text-xl md:text-2xl font-extrabold cursor-pointer hover:text-[#2dd4bf] transition-colors duration-300"
         >
           SB-techlyCoded
         </div>

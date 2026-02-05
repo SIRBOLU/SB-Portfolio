@@ -13,17 +13,21 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faCss3Alt,
   faGithub,
-  faHtml5,
   faLinkedinIn,
-  faReact,
-  faSquareJs,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import sbpic from "../assets/profile-pic.png";
 import Card from "./Card";
 import ProjectCard from "./ProjectCard";
+import tailwind from "../assets/tailwindd.jpg";
+import typescript from "../assets/typescript.png";
+import git from "../assets/git.png";
+import github from "../assets/github.png";
+import html from "../assets/html.png";
+import css from "../assets/css.png";
+import javascript from "../assets/javascript.png";
+import react from "../assets/react.png";
 
 const projectsData = [
   {
@@ -110,18 +114,16 @@ const Hero = () => {
           <div className="relative z-10 text-xs md:text-xl backdrop-blur-xl bg-black/60 border border-white/10 rounded-2xl shadow-[0_0_120px_rgba(45,212,191,0.25)] h-[80vh] flex gap-5 flex-col justify-center p-10 max-w-[800px] transition-all duration-700 hover:shadow-[0_0_180px_rgba(45,212,191,0.45)] ">
             {/* Hello */}
             <p className="text-2xl md:text-4xl text-center text-[rgb(45,212,191)] animate-[fadeIn_1s_ease-out_forwards]">
-              &lt;Hello /&gt;{" "}
-              <span className="inline-block origin-bottom-left animate-[wave_1.8s_ease-in-out_infinite]">
-                👋
-              </span>
-            </p>
-
-            {/* Name */}
-            <p className="text-white text-center text-2xl md:text-4xl font-semibold tracking-wide animate-[fadeIn_1.4s_ease-out_forwards]">
-              I am{" "}
-              <span className="text-[rgb(45,212,191)] drop-shadow-[0_0_12px_rgba(45,212,191,0.6)]">
-                Peter Boluwatife Akintola
-              </span>
+              <p className="text-white text-center text-2xl md:text-4xl font-semibold tracking-wide animate-[fadeIn_1.4s_ease-out_forwards]">
+                &lt;Hello /&gt;{" "}
+                <span className="inline-block origin-bottom-left animate-[wave_1.8s_ease-in-out_infinite]">
+                  👋,{" "}
+                </span>{" "}
+                I'm{" "}
+                <span className="text-[rgb(45,212,191)] drop-shadow-[0_0_12px_rgba(45,212,191,0.6)]">
+                  Peter
+                </span>
+              </p>
             </p>
 
             {/* Description */}
@@ -211,11 +213,12 @@ const Hero = () => {
         <div className="max-w-full flex flex-col items-center text-center md:text-left md:flex-row p-8 md:p-0 gap-[3rem]">
           <img src={sbpic} alt="my-pic" className="w-[200px] h-[200px]" />
           <p className="text-white text-sm leading-7">
-            I am a motivated and results-driven web developer, with a good
-            knowledge of HTML, CSS, Tailwind CSS, JavaScript, and ReactJS,
-            seeking an opportunity to add value by building responsive and
-            scalable user interfaces. I am detail-oriented, a fast learner, and
-            a collaborative team player, eager to grow under experienced
+            I'm a frontend developer with 3+ years of experience, I am a
+            motivated and results-driven web developer, with a good knowledge of
+            HTML, CSS, Tailwind CSS, JavaScript, and ReactJS, seeking an
+            opportunity to add value by building responsive and scalable user
+            interfaces. I am detail-oriented, a fast learner, and a
+            collaborative team player, eager to grow under experienced
             professionals. I am also a team player, committed to building
             engaging digital experiences that enhance user satisfaction, while
             ultimately supporting organization’s mission.
@@ -228,7 +231,7 @@ const Hero = () => {
         </div>
 
         {/* SKILLS */}
-        <div className="max-w=full text-white flex flex-col items-center text-center md:text-left md:flex-row justify-between gap-12 mt-14 mb-14 max-w-[800px] ">
+        <div className="max-w=full text-white flex flex-col items-center text-center md:text-left md:flex-row justify-between  gap-12 mt-14 mb-14 max-w-[800px] ">
           <div className="w-[350px]">
             <p>SKILLS</p>
             <p className="pb-4 pt-2 text-3xl">
@@ -236,52 +239,52 @@ const Hero = () => {
             </p>
             <p className="text-sm leading-7">
               Frontend Developer skilled in building responsive, accessible, and
-              user-centric web interfaces using HTML, CSS, JavaScript, React,
-              and Tailwind CSS. Experienced in translating designs into
-              performant, scalable, and maintainable code.
+              user-centric web interfaces using HTML, CSS, JavaScript,
+              TypeScript, React, and Tailwind CSS. Experienced in translating
+              designs into performant, scalable, and maintainable code.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 relative right-28">
-            <div className="flex flex-col items-center">
-              <FontAwesomeIcon icon={faHtml5} className="text-[50px]" />
+          <div className="grid grid-cols-3 place-items-center gap-8">
+            <div className="flex flex-col items-center justify-center">
+              <img src={html} alt="html" className="h-8 w-8 rounded-lg" />
               <p className="text-xs">HTML5</p>
             </div>
-            <div className="flex flex-col items-center">
-              <FontAwesomeIcon icon={faCss3Alt} className="text-[50px]" />
+            <div className="flex flex-col items-center justify-center">
+              <img src={css} alt="CSS3" className="h-8 w-8 rounded-lg" />
               <p className="text-xs">CSS3</p>
             </div>
-            <div className="flex flex-col items-center">
-              <FontAwesomeIcon icon={faSquareJs} className="text-[50px]" />
-              <p className="text-xs">JAVASCRIPT</p>
+            <div className="flex flex-col items-center justify-center">
+              <img src={javascript} alt="js" className="h-8 w-8 rounded-lg" />
+              <p className="text-xs">JavaScript</p>
             </div>
-            <div className="flex flex-col items-center">
-              <FontAwesomeIcon icon={faReact} className="text-[50px]" />
-              <p className="text-xs">REACTJS</p>
+            <div className="flex flex-col items-center justify-center">
+              <img src={react} alt="react" className="h-8 w-8 rounded-lg" />
+              <p className="text-xs">React</p>
             </div>
-            {/* <div className="flex justify-evenly">
-              <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
-                <FontAwesomeIcon icon={faHtml5} />
-              </div>
-              <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
-                CSS3
-              </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src={tailwind}
+                alt="tailwind"
+                className="h-8 w-8 rounded-lg"
+              />
+              <p className="text-xs">Tailwind</p>
             </div>
-            <div className="flex justify-evenly">
-              <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
-                JAVASCRIPT
-              </div>
-              <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
-                REACT
-              </div>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src={typescript}
+                alt="tailwind"
+                className="h-8 w-8 rounded-lg"
+              />
+              <p className="text-xs">TypeScript</p>
             </div>
-            <div className="flex justify-evenly">
-              <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
-                TAILWIND
-              </div>
-              <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
-                UI DESIGN
-              </div>
-            </div> */}
+            <div className="flex flex-col items-center justify-center">
+              <img src={git} alt="tailwind" className="h-8 w-8 rounded-lg" />
+              <p className="text-xs">Git</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <img src={github} alt="tailwind" className="h-8 w-8 rounded-lg" />
+              <p className="text-xs">Github</p>
+            </div>
           </div>
         </div>
 
