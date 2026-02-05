@@ -59,7 +59,11 @@ const ProjectCard = ({ image, title, link, naration }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-[170px] object-cover rounded-md block"
+          className="w-full h-[170px] object-cover rounded-md block transform
+        transition-transform
+        duration-500
+        ease-out
+        hover:scale-105"
         />
       </div>
 

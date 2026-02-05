@@ -1,4 +1,3 @@
-import React from "react";
 import todo from "../assets/todo.png";
 import soccer from "../assets/soccer.png";
 import advice from "../assets/advice.png";
@@ -14,8 +13,12 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import {
+  faCss3Alt,
   faGithub,
+  faHtml5,
   faLinkedinIn,
+  faReact,
+  faSquareJs,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import sbpic from "../assets/profile-pic.png";
@@ -41,52 +44,115 @@ const projectsData = [
   },
 ];
 const Hero = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <div>
         {/* INTRODUCTION */}
-        <div className="text-xs md:text-xl bg-black h-[80vh] flex gap-4 flex-col justify-center p-10">
-          {/* <h1 className="text-4xl text-center text-[rgb(45,212,191)]">
-            {`<Hello/>`} 👋 {"<Hello/>"}
-          </h1> */}
-          <p className="text-2xl md:text-4xl text-center text-[rgb(45,212,191)]">
-            &lt;Hello /&gt; 👋
-          </p>
+        {/* <div id="home" className="flex justify-center">
+          <div className="text-xs md:text-xl bg-black h-[80vh] flex gap-4 flex-col justify-center p-10 max-w-[800px]">
+            <p className="text-2xl md:text-4xl text-center text-[rgb(45,212,191)]">
+              &lt;Hello /&gt; 👋
+            </p>
 
-          <p className="text-white text-center text-2xl md:text-4xl">
-            I am{" "}
-            <span className="text-[rgb(45,212,191)]">
-              Peter Boluwatife Akintola
-            </span>
-          </p>
-          <p className="text-white text-center">
-            A seasoned{" "}
-            <span className="text-[rgb(45,212,191)]">{`{Frontend Developer}`}</span>{" "}
-            transforming ideas into stunning digital experiences. Let's create
-            something amazing.
-          </p>
-          <div className=" text-center flex justify-center gap-4 mt-8 [&>*]:bg-gray-200 [&>*]:rounded-full [&>*]:p-2">
-            <FontAwesomeIcon
-              icon={faGithub}
-              className="hover:bg-[rgb(45,212,191)]"
-            />
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              className="hover:bg-[rgb(45,212,191)]"
-            />
-            <FontAwesomeIcon
-              icon={faLinkedinIn}
-              className="hover:bg-[rgb(45,212,191)]"
-            />
-            <FontAwesomeIcon
-              icon={faTwitter}
-              className="hover:bg-[rgb(45,212,191)]"
-            />
+            <p className="text-white text-center text-2xl md:text-4xl">
+              I am{" "}
+              <span className="text-[rgb(45,212,191)]">
+                Peter Boluwatife Akintola
+              </span>
+            </p>
+            <p className="text-white text-center">
+              A seasoned{" "}
+              <span className="text-[rgb(45,212,191)]">{`{Frontend Developer}`}</span>{" "}
+              transforming ideas into stunning digital experiences. Let's create
+              something amazing.
+            </p>
+            <div className=" text-center flex justify-center gap-4 mt-8 [&>*]:bg-gray-200 [&>*]:rounded-full [&>*]:p-2">
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="hover:bg-[rgb(45,212,191)]"
+              />
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="hover:bg-[rgb(45,212,191)]"
+              />
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                className="hover:bg-[rgb(45,212,191)]"
+              />
+              <FontAwesomeIcon
+                icon={faTwitter}
+                className="hover:bg-[rgb(45,212,191)]"
+              />
+            </div>
+          </div>
+        </div> */}
+        <div
+          id="home"
+          className="relative flex justify-center items-center min-h-[80vh] overflow-hidden"
+        >
+          {/* Animated gradient background */}
+          {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.15),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(56,189,248,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(168,85,247,0.12),transparent_45%)] animate-[pulse_12s_ease-in-out_infinite]" /> */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.35),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(56,189,248,0.3),transparent_55%),radial-gradient(circle_at_50%_80%,rgba(168,85,247,0.3),transparent_60%)] animate-[pulse_10s_ease-in-out_infinite]" />
+
+          {/* Moving glow orbs */}
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-[float_14s_ease-in-out_infinite]" />
+          <div className="absolute top-1/3 -right-32 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-[float_18s_ease-in-out_infinite_reverse]" />
+
+          {/* Glass container */}
+          <div className="absolute z-0 w-[90%] h-[80%] bg-[radial-gradient(circle,rgba(45,212,191,0.35),transparent_65%)] blur-[140px]" />
+
+          <div className="relative z-10 text-xs md:text-xl backdrop-blur-xl bg-black/60 border border-white/10 rounded-2xl shadow-[0_0_120px_rgba(45,212,191,0.25)] h-[80vh] flex gap-5 flex-col justify-center p-10 max-w-[800px] transition-all duration-700 hover:shadow-[0_0_180px_rgba(45,212,191,0.45)] ">
+            {/* Hello */}
+            <p className="text-2xl md:text-4xl text-center text-[rgb(45,212,191)] animate-[fadeIn_1s_ease-out_forwards]">
+              &lt;Hello /&gt;{" "}
+              <span className="inline-block origin-bottom-left animate-[wave_1.8s_ease-in-out_infinite]">
+                👋
+              </span>
+            </p>
+
+            {/* Name */}
+            <p className="text-white text-center text-2xl md:text-4xl font-semibold tracking-wide animate-[fadeIn_1.4s_ease-out_forwards]">
+              I am{" "}
+              <span className="text-[rgb(45,212,191)] drop-shadow-[0_0_12px_rgba(45,212,191,0.6)]">
+                Peter Boluwatife Akintola
+              </span>
+            </p>
+
+            {/* Description */}
+            <p className="text-white/90 text-center leading-relaxed animate-[fadeIn_1.8s_ease-out_forwards]">
+              A seasoned{" "}
+              <span className="text-[rgb(45,212,191)] font-medium">
+                {`{Frontend Developer}`}
+              </span>{" "}
+              transforming ideas into stunning digital experiences. Let’s create
+              something amazing.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex justify-center gap-5 mt-8">
+              {[faGithub, faEnvelope, faLinkedinIn, faTwitter].map(
+                (icon, i) => (
+                  <span
+                    key={i}
+                    className="group relative p-3 rounded-full bg-white/90 text-black transition-all duration-500 hover:bg-[rgb(45,212,191)] hover:scale-110 hover:shadow-[0_0_25px_rgba(45,212,191,0.8)]"
+                  >
+                    <FontAwesomeIcon icon={icon} />
+                    <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 blur-md bg-[rgb(45,212,191)] transition-opacity duration-500 -z-10" />
+                  </span>
+                ),
+              )}
+            </div>
           </div>
         </div>
 
         {/* SERVICES */}
-        <div className="bg-[#27272a] p-10 ">
+        <div id="services" className="bg-[#27272a] p-10 ">
           <div className="text-center [&>*]:text-white">
             <p>SERVICES</p>
             <p className="text-white pt-2 pb-8 text-3xl">
@@ -101,7 +167,7 @@ const Hero = () => {
               icon={<FontAwesomeIcon icon={faGlobe} className="p-4" />}
               title="Web Development"
               description="I use my programming knowledge and skills such as HTML5, CSS3,
-                JAVASCRIPT and TAILWIND to build user-friendly websites"
+                JAVASCRIPT, TYPESCRIPT and TAILWIND to build user-friendly websites"
             />
             <Card
               hoverable
@@ -114,10 +180,10 @@ const Hero = () => {
           </div>
 
           {/* PORTFOLIO */}
-          <div className="text-white text-center my-12">
+          <div id="projects" className="text-white text-center my-12">
             <p>PORTFOLIO</p>
             <p className="text-white pt-2 pb-8 text-3xl">
-              Featured <span className="text-[rgb(45,212,191)] ">Projects</span>
+              My <span className="text-[rgb(45,212,191)] ">Projects</span>
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto text-center text-sm md:text-md [&>*]:bg-[#030712] [&>*]text-white [&>*]:rounded-md [&>*]:h-[250px]">
               {projectsData.map((item, index) => {
@@ -137,7 +203,7 @@ const Hero = () => {
       </div>
 
       {/* MY BIO */}
-      <div className="max-w-[800px] m-auto pt-10 pb-10">
+      <div id="about" className="max-w-[800px] m-auto pt-10 pb-10">
         <p className="text-white text-center">MY BIO</p>
         <p className="text-center text-white text-3xl pb-6">
           About <span className="text-[rgb(45,212,191)]">me</span>.
@@ -175,10 +241,26 @@ const Hero = () => {
               performant, scalable, and maintainable code.
             </p>
           </div>
-          <div className="w-[350px] flex flex-col gap-4 justify-center text-xs">
-            <div className="flex justify-evenly">
+          <div className="grid grid-cols-2 gap-8 relative right-28">
+            <div className="flex flex-col items-center">
+              <FontAwesomeIcon icon={faHtml5} className="text-[50px]" />
+              <p className="text-xs">HTML5</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FontAwesomeIcon icon={faCss3Alt} className="text-[50px]" />
+              <p className="text-xs">CSS3</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FontAwesomeIcon icon={faSquareJs} className="text-[50px]" />
+              <p className="text-xs">JAVASCRIPT</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FontAwesomeIcon icon={faReact} className="text-[50px]" />
+              <p className="text-xs">REACTJS</p>
+            </div>
+            {/* <div className="flex justify-evenly">
               <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
-                HTML5
+                <FontAwesomeIcon icon={faHtml5} />
               </div>
               <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
                 CSS3
@@ -199,12 +281,12 @@ const Hero = () => {
               <div className="w-[100px] text-center bg-[#27272a] p-4 border-2 border-[rgb(45,212,191)] rounded-lg ">
                 UI DESIGN
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* CONTACT ME */}
-        <div className="text-white bg-[#27272a] p-8">
+        <div id="contact" className="text-white bg-[#27272a] p-8">
           <div className="text-center">
             <p>GET IN TOUCH</p>
             <p className="text-3xl pb-4">
@@ -292,7 +374,10 @@ const Hero = () => {
         </div>
         <div>
           <ul className="flex flex-col gap-3">
-            <li className="hover:text-[rgb(45,212,191)] text-center md:text-left">
+            <li
+              className="hover:text-[rgb(45,212,191)] text-center md:text-left cursor-pointer"
+              onClick={() => scrollToSection("home")}
+            >
               Home
             </li>
             <li className="hover:text-[rgb(45,212,191)] text-center md:text-left">
