@@ -98,20 +98,18 @@ const Hero = () => {
         </div> */}
         <div
           id="home"
-          className="relative flex justify-center items-center min-h-[80vh] overflow-hidden"
+          className="relative flex justify-center items-center min-h-[80vh] overflow-hidden border-b-2 border-[#27272a]"
         >
-          {/* Animated gradient background */}
-          {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.15),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(56,189,248,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(168,85,247,0.12),transparent_45%)] animate-[pulse_12s_ease-in-out_infinite]" /> */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.35),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(56,189,248,0.3),transparent_55%),radial-gradient(circle_at_50%_80%,rgba(168,85,247,0.3),transparent_60%)] animate-[pulse_10s_ease-in-out_infinite]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.18),transparent_60%),radial-gradient(circle_at_80%_30%,rgba(0,0,0,0.65),transparent_70%),radial-gradient(circle_at_50%_80%,rgba(0,0,0,0.75),transparent_75%)] animate-[pulse_12s_ease-in-out_infinite]" />
 
           {/* Moving glow orbs */}
-          <div className="absolute -top-32 -left-32 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-[float_14s_ease-in-out_infinite]" />
-          <div className="absolute top-1/3 -right-32 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-[float_18s_ease-in-out_infinite_reverse]" />
+          <div />
+          <div />
 
           {/* Glass container */}
-          <div className="absolute z-0 w-[90%] h-[80%] bg-[radial-gradient(circle,rgba(45,212,191,0.35),transparent_65%)] blur-[140px]" />
+          <div />
 
-          <div className="relative z-10 text-xs md:text-xl backdrop-blur-xl bg-black/60 border border-white/10 rounded-2xl shadow-[0_0_120px_rgba(45,212,191,0.25)] h-[80vh] flex gap-5 flex-col justify-center p-10 max-w-[800px] transition-all duration-700 hover:shadow-[0_0_180px_rgba(45,212,191,0.45)] ">
+          <div>
             {/* Hello */}
             <p className="text-2xl md:text-4xl text-center text-[rgb(45,212,191)] animate-[fadeIn_1s_ease-out_forwards]">
               <p className="text-white text-center text-2xl md:text-4xl font-semibold tracking-wide animate-[fadeIn_1.4s_ease-out_forwards]">
@@ -154,7 +152,7 @@ const Hero = () => {
         </div>
 
         {/* SERVICES */}
-        <div id="services" className="bg-[#27272a] p-10 ">
+        <div id="services" className="border-b-2 border-[#27272a] p-10 ">
           <div className="text-center [&>*]:text-white">
             <p>SERVICES</p>
             <p className="text-white pt-2 pb-8 text-3xl">
@@ -206,28 +204,30 @@ const Hero = () => {
 
       {/* MY BIO */}
       <div id="about" className="max-w-[800px] m-auto pt-10 pb-10">
-        <p className="text-white text-center">MY BIO</p>
-        <p className="text-center text-white text-3xl pb-6">
-          About <span className="text-[rgb(45,212,191)]">me</span>.
-        </p>
-        <div className="max-w-full flex flex-col items-center text-center md:text-left md:flex-row p-8 md:p-0 gap-[3rem]">
+        <div className="max-w-full flex flex-col items-center     text-center md:text-left md:flex-row p-8 md:p-0 gap-[3rem]">
           <img src={sbpic} alt="my-pic" className="w-[200px] h-[200px]" />
-          <p className="text-white text-sm leading-7">
-            I'm a frontend developer with 3+ years of experience, I am a
-            motivated and results-driven web developer, with a good knowledge of
-            HTML, CSS, Tailwind CSS, JavaScript, and ReactJS, seeking an
-            opportunity to add value by building responsive and scalable user
-            interfaces. I am detail-oriented, a fast learner, and a
-            collaborative team player, eager to grow under experienced
-            professionals. I am also a team player, committed to building
-            engaging digital experiences that enhance user satisfaction, while
-            ultimately supporting organization’s mission.
-            <div>
-              <button className="bg-[#2dd4bf] text-black hover:bg-white p-2 pr-4 pl-4 rounded-full mt-4">
-                View Resume <FontAwesomeIcon icon={faFile} />
-              </button>
-            </div>
-          </p>
+          <div>
+            <p className="text-white text-center">MY BIO</p>
+            <p className="text-center text-white text-3xl pb-6">
+              About <span className="text-[rgb(45,212,191)]">me</span>.
+            </p>
+            <p className="text-white text-sm leading-7">
+              I'm a frontend developer with 3+ years of experience, I am a
+              motivated and results-driven web developer, with a good knowledge
+              of HTML, CSS, Tailwind CSS, JavaScript, and ReactJS, seeking an
+              opportunity to add value by building responsive and scalable user
+              interfaces. I am detail-oriented, a fast learner, and a
+              collaborative team player, eager to grow under experienced
+              professionals. I am also a team player, committed to building
+              engaging digital experiences that enhance user satisfaction, while
+              ultimately supporting organization’s mission.
+              <div>
+                <button className="bg-[#2dd4bf] text-black hover:bg-white p-2 pr-4 pl-4 rounded-full mt-4">
+                  View Resume <FontAwesomeIcon icon={faFile} />
+                </button>
+              </div>
+            </p>
+          </div>
         </div>
 
         {/* SKILLS */}
@@ -289,7 +289,10 @@ const Hero = () => {
         </div>
 
         {/* CONTACT ME */}
-        <div id="contact" className="text-white bg-[#27272a] p-8">
+        <div
+          id="contact"
+          className="text-white border-2 border-[#27272a] p-8 rounded-3xl"
+        >
           <div className="text-center">
             <p>GET IN TOUCH</p>
             <p className="text-3xl pb-4">
