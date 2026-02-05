@@ -115,7 +115,7 @@ const Hero = () => {
             {/* Hello */}
             <p className="text-2xl md:text-4xl text-center text-[rgb(45,212,191)] animate-[fadeIn_1s_ease-out_forwards]">
               <p className="text-white text-center text-2xl md:text-4xl font-semibold tracking-wide animate-[fadeIn_1.4s_ease-out_forwards]">
-                &lt;Hello /&gt;{" "}
+                <span className="font-thin text-[30px]">&lt;Hello /&gt;</span>
                 <span className="inline-block origin-bottom-left animate-[wave_1.8s_ease-in-out_infinite]">
                   👋,{" "}
                 </span>{" "}
