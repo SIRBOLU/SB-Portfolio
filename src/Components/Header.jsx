@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="border-b-2 border-[#27272a] text-white fixed top-0 left-0 right-0 z-50">
+    <header className="bg-black border-b-2 border-[#27272a] text-white fixed top-0 left-0 right-0 z-50">
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 md:px-10 py-4">
         {/* Logo */}
