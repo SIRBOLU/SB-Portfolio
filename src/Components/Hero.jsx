@@ -35,16 +35,49 @@ const projectsData = [
     link: "https://soccer-quiz-app.vercel.app/",
     title: "Soccer Quiz app",
     naration: "This is to test your football knowledge",
+    skills: ["HTML", "CSS", "Tailwind", "Typescript", "NodeJs", "Python"],
   },
   {
     image: todo,
     link: "https://todo-app-puce-delta.vercel.app/",
     title: "A todo-list app",
+    naration: "This is to test your football knowledge",
+    skills: ["HTML", "CSS", "Tailwind"],
   },
   {
     image: advice,
     link: "https://advice-generator-eight-kappa.vercel.app/",
     title: "An automated advice app",
+    naration: "This is to test your football knowledge",
+    skills: ["HTML", "CSS", "Tailwind"],
+  },
+  {
+    image: advice,
+    link: "https://advice-generator-eight-kappa.vercel.app/",
+    title: "An automated advice app",
+    naration: "This is to test your football knowledge",
+    skills: ["HTML", "CSS", "Tailwind"],
+  },
+  {
+    image: advice,
+    link: "https://advice-generator-eight-kappa.vercel.app/",
+    title: "An automated advice app",
+    naration: "This is to test your football knowledge",
+    skills: ["HTML", "CSS", "Tailwind"],
+  },
+  {
+    image: advice,
+    link: "https://advice-generator-eight-kappa.vercel.app/",
+    title: "An automated advice app",
+    naration: "This is to test your football knowledge",
+    skills: ["HTML", "CSS", "Tailwind"],
+  },
+  {
+    image: advice,
+    link: "https://advice-generator-eight-kappa.vercel.app/",
+    title: "An automated advice app",
+    naration: "This is to test your football knowledge",
+    skills: ["HTML", "CSS", "Tailwind"],
   },
 ];
 const Hero = () => {
@@ -160,7 +193,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[800px] mx-auto text-sm md:text-md">
+          <div className="[&>*]:bg-[#030712] [&>*]:text-white [&>*]:p-4 [&>*]:rounded-md [&>*]:h-[250px] flex flex-col md:flex-row justify-center gap-6 items-center text-center max-w-[1200px] mx-auto text-sm md:text-md">
             {/* 1st column */}
             <Card
               hoverable
@@ -185,7 +218,7 @@ const Hero = () => {
             <p className="text-white pt-2 pb-8 text-3xl">
               My <span className="text-[rgb(45,212,191)] ">Projects</span>
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto text-center text-sm md:text-md [&>*]:bg-[#030712] [&>*]text-white [&>*]:rounded-md [&>*]:h-[250px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[1200px] mx-auto text-center text-sm md:text-md [&>*]:bg-[#030712] [&>*]text-white [&>*]:rounded-md">
               {projectsData.map((item, index) => {
                 return (
                   <ProjectCard
@@ -193,7 +226,8 @@ const Hero = () => {
                     image={item.image}
                     title={item.title}
                     link={item.link}
-                    // naration={item.naration}
+                    skills={item.skills}
+                    naration={item.naration}
                   />
                 );
               })}

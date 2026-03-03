@@ -51,7 +51,8 @@
 
 // export default ProjectCard;
 
-const ProjectCard = ({ image, title, link, naration }) => {
+const ProjectCard = ({ image, title, link, naration, skills }) => {
+  console.log(skills);
   return (
     <div className="w-full h-full flex flex-col relative top-0">
       {/* Image */}
@@ -68,7 +69,7 @@ const ProjectCard = ({ image, title, link, naration }) => {
       </div>
 
       {/* Content */}
-      <div className="px-4 pb-4 flex flex-col flex-grow">
+      <div className="px-4 pb-4 flex flex-col">
         {/* Title as link */}
         <a
           href={link}
@@ -80,8 +81,59 @@ const ProjectCard = ({ image, title, link, naration }) => {
         </a>
         <div>{naration}</div>
       </div>
+      <div className="flex flex-wrap justify-center gap-4 p-4 items-center">
+        {skills.map((e, i) => (
+          <span
+            key={i}
+            className=" px-3 py-1 text-xs text-teal-400 bg-teal-400/10 border border-teal-400 rounded-full"
+          >
+            {e}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default ProjectCard;
+
+// const ProjectCard = ({ image, title, link, naration, skills }) => {
+//   return (
+//     <div className="w-full h-full flex flex-col relative top-0 bg-gray-900 text-white rounded-lg overflow-hidden">
+//       {/* Image Container */}
+//       <div className="m-4 overflow-hidden rounded-md">
+//         <img
+//           src={image}
+//           alt={title}
+//           className="w-full h-[170px] object-cover block transform transition-transform duration-500 ease-out hover:scale-105"
+//         />
+//       </div>
+
+//       {/* Content */}
+//       <div className="px-4 pb-2 flex flex-col flex-grow">
+//         <a
+//           href={link}
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           className="text-[rgb(45,212,191)] font-semibold underline mb-2"
+//         >
+//           {title}
+//         </a>
+//         <div className="text-sm text-gray-300 mb-4">{naration}</div>
+//       </div>
+
+//       {/* Skills Container - Fixed Logic Here */}
+//       <div className="px-4 pb-4 flex flex-wrap gap-2">
+//         {skills.map((skill, index) => (
+//           <span
+//             key={index}
+//             className="px-3 py-1 text-xs font-medium text-teal-400 bg-teal-400/10 border border-teal-400/20 rounded-full"
+//           >
+//             {skill}
+//           </span>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+// export default ProjectCard;
